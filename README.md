@@ -10,22 +10,24 @@ IN PROGRESS
 
 ## Project Overview
 
-The goal of this project is to create a 2.5 axis cnc controlled plotter with the ability to tool change. A plotter is a device that holds a pen and follows G-Code instructions to draw, and my current design implements an x-y gantry with a servo actuated z axis. 
+The goal of this project is to create a 2.5 axis cnc controlled plotter with the ability to tool change. A plotter is a device that holds a pen and follows G-Code instructions to draw. My current design implements an x-y gantry with a servo actuated z axis. 
 
 *video example, maybe*
 
-This machine may also be upgraded to a lazer engraver, lazer cutter, or cnc router in future iterations. 
+Future iterations may expand to lazer engraving, simple lazer cutting, or wood cnc routing.  
 
 ## Educational Value Added
 
-Building this CNC plotter has immense educational value through integrating design, mechanics, electronics, controls, and software into a single project. 
+Building this CNC plotter has immense educational value through integrating design, mechanics, electronics, controls, and software into a single system. 
 
 I have a controls engineering internship lined up for summer 2026, and a lot of the machines I will be working on are 3 axis gantrys. This project will serve as a window into the full stack design process, alongside giving me a machine to practice with. I plan to use this plotter not just for making interesting art, but also to learn ladder logic position control and simulated PLC software.
 
 Skills and concepts that have been applied up to this point:
 - Translating vague goals and constraints into a workable architecture which is iteratively designed and edited into a completed first draft
 - CAD in Fusion
-- 
+- Understanding and working around mechanical constraints
+- Designing a motor control system
+- Electronic and mechanical parts selection based on goals and specs
 
 ## Tasks
 
@@ -51,7 +53,7 @@ Screws are more rigid than belts, but this is a simple plotter and the tool shou
 Originally, I designed the machine to be about 1.5x bigger along each axis, but this seemed redundant and akward. The final design has a drawimg area for A2 paper, about 600x420 mm. Shorter axes means more strength and less expensive materials, alongside 3D printed joints receiving less force.
 
 6. Electronics
-For the control and power delivery, I made relatively standard decisions based on the specs I had already designed. An Arduino Uno with hobbiest CNC shield and 2 stepper drivers rated at 2.2 A each handle the motor control including firmware for G-code streaming. I will test the machine using grbl, open source firmware that converts G-code to CNC motor control signals, but I plan to write my own eventually. For power delivery .
+For the control and power delivery, I made relatively standard decisions based on the specs I had already designed. An Arduino Uno with hobbiest CNC shield and 2 stepper drivers rated at 2.2 A each handle the motor control including firmware for G-code streaming. I will test the machine using grbl, an open source firmware that converts G-code to CNC motor control signals, but I plan to write my own eventually. For power delivery I will use a DC power supply sized for stepper peak current, alongside the arduino and stepper needs. 
 
 ## Design Misc
 
@@ -60,6 +62,9 @@ For the control and power delivery, I made relatively standard decisions based o
 ## Steps for Documenting Your Design Process
 
 <!-- Your Text Here. You may work with your mentor on this later when they are assigned -->
+- Maintain a work log on this git repo
+- Store CAD and control files here
+- Pictures and videos
 
 ## BOM + Component Cost
 
